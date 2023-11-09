@@ -1,0 +1,26 @@
+set n to a list of (8, 3, 7, 4, 6,10, 101010, 293, 3290, 020)
+set nl to length of _n_
+set swapped to true
+set numone to value at 0 in n
+set numtwo to value at 1 in n
+#
+loop while _swapped_
+set i to -1
+set ipo to _i_ + 1
+change swapped to false
+loop through n as val
+if1 _i_ is not equal to -1
+change numone to value at _i_ in n
+change numtwo to _val_
+if2 _numone_ is greater than _numtwo_
+change value at _i_ to _numtwo_ in n
+change value at _ipo_ to _numone_ in n
+change swapped to true
+end if2
+end if1
+change i to _i_ + 1
+change ipo to _ipo_ + 1
+end loop
+end loop
+write _n_
+run
